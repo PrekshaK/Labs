@@ -1,0 +1,17 @@
+
+// class que{
+
+//     private:
+//      	int A[MAX_SIZE];
+// 	    int front, rear;
+
+// 	public:
+// 		que();
+// 		bool IsEmpty();
+// 		bool IsFull();
+// 		void Enqueue(string str);
+// 		void Dequeue();
+// 		int Front();
+// 		void print();
+	
+// };
