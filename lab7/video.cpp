@@ -14,6 +14,6 @@ void video::check(){
 }
 
 void video::display(){
-	cout << "Video: " << getTitle();
+	cout << "Video: " << getTitle() << " " ;
 	getLength()->print();
 }

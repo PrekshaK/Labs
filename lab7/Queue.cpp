@@ -11,6 +11,7 @@ class Queue{
     private:
      	media** A;
 	    int front, rear;
+	    int total;
 
 	public:
 		Queue(){
@@ -40,6 +41,7 @@ class Queue{
 			}else{
 				rear = (rear+1)%MAX_SIZE;
 			}
+
 			A[rear] = x;
 
 
@@ -70,12 +72,25 @@ class Queue{
 
 		void print(){
 			int count = (rear + MAX_SIZE - front) % MAX_SIZE + 1;
+			int total = 0;
+			int minutes, hours, sec;
 			for (int i = 0; i <count; i++){
 				int index = (front+i) % MAX_SIZE;
 				//A[index]check();
 				A[index]->display();
+				total += A[index]->getLength()->seconds;
+
+				minutes = total /60;
+				hours = minutes / 60;
+
+				minutes = minutes % 60;
+				sec = total % 60;
+
+
+
 
 			}
+			cout << "total length is " << hours << ":" << minutes << ":" << sec << endl;
 			cout << " \n \n";
 		}
 	

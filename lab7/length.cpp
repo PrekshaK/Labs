@@ -4,13 +4,14 @@
 #include <iostream>
 using namespace std;
 
-class Length{
+struct Length{
 
-public:
+
 
 	int hours;
 	int minutes;
 	int seconds;
+	int sec; //to preserve seconds on the next print
 
 	Length(int sec){
 		seconds = sec;
@@ -25,11 +26,12 @@ public:
 		hours = minutes / 60;
 
 		minutes = minutes % 60;
-		seconds = seconds % 60;
+		sec = seconds % 60;
 
 
 		
-		cout << hours <<":"<<minutes<<":"<<seconds<<endl;
+		cout << hours <<":"<<minutes<<":"<< sec <<endl;
+
 	}
 
      

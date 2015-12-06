@@ -10,6 +10,6 @@ music::music(string mtitle, Length* mlength):media(mtitle, mlength){
 
 
 void music::display(){
-	cout << "Song: " << getTitle();
+	cout << "Song: " << getTitle() << " ";
 	getLength()->print();
 }
